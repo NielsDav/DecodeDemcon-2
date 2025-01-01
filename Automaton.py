@@ -26,7 +26,7 @@ class Automaton:
         """
         __row1 = self._celllist
         for i in indexList:
-            if i <= self._length:
+            if i <= self._length: # Check if integer is in length of automaton. Otherwise, ignore.
                 __row1[i-1] = 1
         self._celllist = __row1
 
@@ -66,8 +66,8 @@ class Automaton:
         line = ""
         for i in cellrow:
             if(i):
-                line += '*'
-                # line += '■'
+                # line += '*'
+                line += '■'
             else:
                 line += ' '
         print(line)
